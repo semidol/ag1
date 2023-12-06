@@ -1,0 +1,27 @@
+$main-color1: #0f2e2f;
+$secondary-color1: #f3f1f0;
+
+@mixin scroll($scroll-main-color, $scroll-bg-color) {
+  scrollbar-width: thin;
+  scrollbar-color: $scroll-main-color $scroll-bg-color;
+  &::-webkit-scrollbar {
+     width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+     background: $scroll-bg-color;
+  }
+  &::-webkit-scrollbar-thumb {
+     background-color: $scroll-main-color;
+  }
+}
+
+@mixin btn() {
+   border-radius: 32px;
+   color: white;
+   background-color: #2f7d39;
+   transition: background-color 0.3s ease;
+   cursor: pointer;
+   &:hover {
+      background-color: #329b46;
+   }
+}

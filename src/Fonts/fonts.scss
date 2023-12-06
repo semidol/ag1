@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Rubik'),
+		url('./Rubik-Regular.woff2') format('woff2'), 
+		url('./Rubik-Regular.woff') format('woff'),
+		url('./Rubik-Regular.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Rubik Bold'),
+		url('./Rubik-Bold.woff2') format('woff2'), 
+		url('./Rubik-Bold.woff') format('woff'),
+		url('./Rubik-Bold.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'Source';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Serif 4'),
+		url('./SourceSerif4-Regular.woff2') format('woff2'), 
+		url('./SourceSerif4-Regular.woff') format('woff'),
+		url('./SourceSerif4-Regular.ttf') format('ttf'),
+}

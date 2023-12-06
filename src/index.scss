@@ -1,0 +1,63 @@
+@import './variables.scss';
+@import './Fonts/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  font-family: Rubik, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1568px;
+  padding: 0 64px;
+}
+
+@media (max-width: 1439.98px) {
+  .container {
+    padding: 0 56px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 300vh;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+footer .ReactCollapse--collapse {
+  transition: height 300ms;
+}
+
+main {
+  flex-grow: 1;
+}
+
+body {
+  @include scroll(#bac0ca, rgba(209,213,219,.6))
+}
+
+body.active, body.portal {
+  overflow: hidden;
+}

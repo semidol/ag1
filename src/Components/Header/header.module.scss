@@ -1,0 +1,293 @@
+@import '/src/variables.scss';
+
+.header {
+  z-index: 100;
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  left: 0;
+  background: transparent;
+  height: 138px;
+  &.scrolled {
+    background: white;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    .burgerLine {
+      background-color: $main-color1;
+      &::after,&::before {
+        background-color: $main-color1;
+      }
+    }
+
+    .logo * {
+      fill: $main-color1;;
+    }
+
+    .switcher * {
+      border-color: $main-color1;
+    }
+  }
+}
+
+.wrapper {
+  height: 100%;
+  padding: 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftSide {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.burger {
+  cursor: pointer;
+  width: 25px;
+  height: 23px;
+  position: relative;
+}
+.burgerLine {
+  top: 0;
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  &::after,&::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  &::before {
+    top: 10px;
+  }
+  &::after {
+    top: 20px;
+  }
+}
+
+.logo {
+  width: 118px;
+}
+
+.rightSide {
+  align-items: center;
+  display: flex;
+  gap: 32px;
+}
+.notBtn {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  display: flex;
+  &:hover {
+    opacity: 0.92 !important;
+  }
+}
+.notBtnR {
+  position: relative;
+  top: 3px;
+  font-size: 9px;
+}
+
+.btn {
+  opacity: 0;
+  align-items: center;
+  display: flex;
+  padding: 14px 20px 14px 24px;
+  font-weight: 700;
+  font-size: 20px;
+  @include btn();
+  transition: opacity 0.5s ease;
+  &:hover {
+    background-color:#2f7d39;
+  }
+  svg {
+    width: 24px;
+  }
+}
+
+.btnR {
+  position: relative;
+  top: 3px;
+  align-self: flex-start;
+  font-size: 8px;
+  margin-right: 6px;
+}
+
+.menu {
+  width: 800px;
+  top: 0;
+  left: -100%;
+  transition: left 0.8s ease;
+  position: absolute;
+  padding: 40px 55px;
+  background-color: #0f2e2f;
+  min-height: 100vh;
+  &.active {
+    left: 0;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 32px;
+}
+
+.close {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+.closeLine {
+  &::after, &::before {
+    background-color: white;
+    top: 12px;
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
+.menuLogo {
+  width: 118px;
+}
+
+
+.item {
+  padding: 20px 0;
+  border-bottom: 2px solid white;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.link {
+  color: white;
+  font-size: 32px;
+  transition: color 0.3s ease;
+  &:hover {
+    color: #2f7d39;
+  }
+}
+
+@media (max-width: 1919.98px) {
+  .menu {
+    width: 702px;
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .menu {
+    width: 652px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .menu {
+    width: 608px;
+  }
+
+  .header {
+    max-height: 80px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    // position: absolute;
+  }
+
+  .wrapper {
+    padding: 0 24px 0 17px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .btn, .notBtn {
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    top: calc(50% - 19px);
+    left: calc(50% - 48px);
+    width: 96px;
+  }
+
+  .leftSide {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .burger {
+    width: 18px;
+    height: 17px;
+  }
+
+  .burgerLine {
+    width: 18px;
+    height: 2px;
+    &::after,&::before {
+      width: 18px;
+      height: 2px;
+    }
+    &::before {
+      top: 7px;
+    }
+    &::after {
+      top: 14px;
+    }
+  }
+
+  .menu {
+    padding: 32px 32px;
+  }
+
+  .close {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .closeLine {
+    &::after, &::before {
+      top: 8px;
+      width: 20px;
+    }
+  }
+
+  .menuLogo {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 48px);
+    width: 96px;
+  }
+
+  .link {
+    font-size: 24px;
+  }
+
+  .item {
+    border-bottom: 1px solid white;
+  }
+}
