@@ -22,7 +22,7 @@
       fill: $main-color1;;
     }
 
-    .switcher * {
+    .switcher {
       border-color: $main-color1;
     }
   }
@@ -79,7 +79,10 @@
   gap: 32px;
 }
 .notBtn {
-  opacity: 0;
+  top: 12px;
+  right: 0;
+  position: absolute;
+  opacity: 1;
   transition: opacity 0.5s ease;
   cursor: pointer;
   color: white;
@@ -88,13 +91,18 @@
   text-transform: uppercase;
   display: flex;
   &:hover {
-    opacity: 0.92 !important;
+    opacity: 0.92;
   }
 }
+
 .notBtnR {
   position: relative;
   top: 3px;
   font-size: 9px;
+}
+
+.btnWrapper {
+  position: relative;
 }
 
 .btn {
@@ -120,6 +128,33 @@
   align-self: flex-start;
   font-size: 8px;
   margin-right: 6px;
+}
+
+.flag {
+  width: 62px;
+}
+
+.switcher {
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  &:hover {
+    opacity: 0.92;
+  }
+}
+
+.header.scrolled {
+  .btn {
+    opacity: 1;
+  }
+  .notBtn {
+    opacity: 0;
+  }
 }
 
 .menu {
@@ -213,7 +248,20 @@
 
 @media (max-width: 767.98px) {
   .header {
-    // position: absolute;
+    .burgerLine {
+      background-color: $main-color1;
+      &::after,&::before {
+        background-color: $main-color1;
+      }
+    }
+
+    .logo * {
+      fill: $main-color1;;
+    }
+
+    .switcher {
+      border-color: $main-color1;
+    }
   }
 
   .wrapper {

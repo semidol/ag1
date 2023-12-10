@@ -1,18 +1,19 @@
-import SwitcherLang from '../SwitcherLang/SwitcherLang';
 import {useEffect, useRef, useState} from 'react';
 import style from './header.module.scss';
-import logo from './logo.svg';
 import { ReactComponent as Logo } from './logo.svg';
 import { ReactComponent as Arrow } from './arrow.svg';
+import { Trans, useTranslation } from 'react-i18next';
+import { ReactComponent as EnFlag } from './flag-russia-circle.svg';
+import SwitcherLang from '../SwitcherLang/SwitcherLang';
+import { createPortal } from 'react-dom';
 
 
 export default function Header() {
-  const btnRef = useRef<HTMLButtonElement>(null);
-  const notBtnRef = useRef<HTMLDivElement>(null);
+  const {t} = useTranslation();
   const menuRef = useRef<HTMLMenuElement>(null);
   const body = document.querySelector('body');
+  const [isSwitcherOpen, setIsSwitcherOpen] = useState(false)
   const [isMenuActive, setIsMenuActive] = useState(false);
-  const [isBtnVisible, setIsBtnVisible] = useState(false);
 
   useEffect(() => {
     const header = document.querySelector('header');
@@ -24,20 +25,13 @@ export default function Header() {
         header.style.height = currentScroll <= scrollPoint1 ? 138 - currentScroll + 'px' : '80px';
         if (currentScroll >= scrollPoint2) {
           header.classList.add(style.scrolled);
-          setIsBtnVisible(true) 
-          if (btnRef.current) {
-            btnRef.current.style.opacity = '1';
-          }
         } else {
           header.classList.remove(style.scrolled)
-          setIsBtnVisible(false)
-          if (notBtnRef.current) {
-            notBtnRef.current.style.opacity = '1';
-          }
         }
       }
     }
-
+    
+    scrollHandler();
     document.addEventListener('scroll', scrollHandler)
 
     return () => {
@@ -57,6 +51,20 @@ export default function Header() {
     }
   }
 
+  function setPortal(active:boolean) {
+    let body = document.querySelector('body');
+    if (body) {
+      body.style.marginRight = body.classList.contains('portal') ?
+        '0'
+        :
+        window.innerWidth - body.clientWidth + 'px';
+      if (active) {
+        body.classList.add('portal');
+      } else {body.classList.remove('portal')}
+    }
+    setIsSwitcherOpen(active);
+  }
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -64,13 +72,11 @@ export default function Header() {
         setIsMenuActive(false)
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
-
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, []); //click outside menu
 
   return (
     <header className={style.header}>
@@ -84,17 +90,17 @@ export default function Header() {
           </a>
         </div>
         <div className={style.rightSide}> 
-          {isBtnVisible ?
-            <button className={style.btn} ref={btnRef}>
-              Get your AG1<span className={style.btnR}>®</span><Arrow />
-            </button>
-            :
-            <div ref={notBtnRef} className={style.notBtn}>
-              Shop AG1<span className={style.notBtnR}>®</span>
-            </div>
-          }
-          <div className={style.switcher}>
-            <SwitcherLang />
+          <div className={style.btnWrapper}>
+              <button className={style.btn}>
+                <Trans i18nKey={'header.btn'}></Trans><Arrow />
+              </button>
+              <div className={style.notBtn}>
+              <Trans i18nKey={'header.notBtn'}></Trans>
+              </div>
+          </div>
+          <div onClick={() => setPortal(true)} className={style.switcher}>
+            <EnFlag className={style.flag}/>
+            {isSwitcherOpen && createPortal(<SwitcherLang setPortal={setPortal} />, document.body)}
           </div>
         </div>
         <menu ref={menuRef} className={isMenuActive ? [style.menu, style.active].join(' ') : style.menu}>
@@ -108,10 +114,10 @@ export default function Header() {
           </div>
           <ul className={style.list}>
             <li className={style.item}>
-              <a href="#" className={style.link}>Shop</a>
+              <a href="#" className={style.link}>{t('header.menu.shop')}</a>
             </li>
             <li className={style.item}>
-              <a href="#" className={style.link}>Our Story</a>
+              <a href="#" className={style.link}>{t('header.menu.story')}</a>
             </li>
           </ul>
         </menu>

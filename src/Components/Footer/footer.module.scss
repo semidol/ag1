@@ -1,6 +1,7 @@
 @import '/src/variables.scss';
 
 .footer {
+  overflow-x: hidden;
   background-color: $main-color1;
   * {
     color: white;
@@ -21,22 +22,13 @@
   display: flex;
   flex-grow: 3;
 }
-.listBlock {
-
-}
 .listHeading {
   font-size: 18px;
   margin-bottom: 25px;
 }
-.list {
-
-}
 .listItem {
   margin-bottom: 10px;
   font-size: 14px;
-}
-.listLink {
-  
 }
 .connectWrapper {
   flex-grow: 1;
@@ -68,6 +60,7 @@
   color: #0f2e2f;
 }
 .btn {
+  cursor: pointer;
   background-color: transparent;
   img {
     width: 24px;
@@ -120,13 +113,13 @@
   justify-content: end;
   align-items: center;
 }
-.param {
-
-}
 .settingsDivider {
   height: 15px;
   width: 2px;
   background-color: white;
+}
+.param {
+  cursor: pointer;
 }
 .right {
   position: absolute;

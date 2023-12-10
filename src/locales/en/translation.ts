@@ -1,0 +1,203 @@
+export const translationEu = {
+  header: {
+    menu: {
+      shop: 'Shop',
+      story: 'Our Story',
+    },
+    btn: 'Get your AG1<span className={style.btnR}>®</span>',
+    notBtn: 'Shop AG1<span className={style.notBtnR}>®</span>',
+  },
+  footer: {
+    list1: {
+      heading: 'SHOP',
+      link1: 'The Pouch',
+      link2: 'Travel Packs',
+    },
+    list2: {
+      heading: 'ABOUT',
+      link1: 'About Us',
+    },
+    list3: {
+      heading: 'CONTACT',
+    },
+    connect: {
+      heading: 'CONNECT',
+      join: 'Join Our Newsletter',
+      input: 'Your Email',
+    },
+    notes: {
+      attention: '* Food supplements are not a substitute for a balanced and varied diet and a healthy lifestyle. Do not exceed the indicated daily intake. Keep out of reach of children. Please inform and consult your doctor before consuming this product. Not suitable for children and adolescents under 18 years, pregnant or breastfeeding women. Refrain from taking other food supplements containing zinc. Persons taking anticoagulant medication should seek medical advice before consuming vitamin K-containing supplements.',
+      note1: '1: Vitamins C, B6 and B12, thiamine, riboflavin, niacin, biotin, pantothenic acid, phosphorus and copper contribute to normal energy-yielding metabolism.',
+      note2: '2: Vitamins C, B6 and B12, riboflavin, niacin, pantothenic acid and folate contribute to the reduction of tiredness and fatigue. Vitamins C, B6 and B12, thiamine, niacin, biotin and folate contribute to normal psychological function. Pantothenic acid contributes to normal mental performance. Zinc contributes to normal cognitive function.',
+      note3: '3: Vitamins A, C, B6 and B12, folate, zinc, copper and selenium contribute to the normal function of the immune system.',
+      note4: '4: Vitamins E and C, riboflavin, zinc, copper and selenium help to protect the bodies cells against oxidative stress',
+      note5: '5: Vitamin K, phosphorus and zinc contribute to the maintenance of normal bones. Vitamin C contributes to normal collagen formation for the normal function of bones.',
+      note6: '6: Thiamine contributes to the normal function of the heart.',
+      note7: '7: Vitamin A, riboflavin, niacin, biotin and zinc contribute to the maintenance of normal skin. Vitamin C contributes to normal collagen formation for the normal function of skin. Copper contributes to normal skin pigmentation and maintenance of normal connective tissues. Zinc and selenium contribute to the maintenance of normal nails.',
+      note8: '8: Chromium contributes to the maintenance of normal blood glucose levels.',
+      note9: '9: Pantothenic acid contributes to normal synthesis and metabolism of steroid hormones, vitamin D and some neurotransmitters. Vitamin B6 contributes to the regulation of hormonal activity. Zinc contributes to the maintenance of normal testosterone levels in the blood and to normal fertility and reproduction. Selenium contributes to the normal thyroid function and to normal spermatogenesis.',
+    },
+    settings: {
+      language: 'English',
+      currency: '€ Euro (EUR)',
+    }
+  },
+  homepage: {
+    coverSection: {
+      heading: 'Once a Day, Every Day',
+      text: 'The science-driven blend of vitamins, minerals, good bacteria, and whole food sourced ingredients.',
+      btn: 'Get Your AG1',
+    },
+    benefitsSection: {
+      heading: 'Benefits of daily use',
+      item1: {
+        heading: 'Wellbeing & Foundational Health',
+        text: 'AG1 supports your body as holistically as possible: skin, hair, nails<span>7</span>, hormonal balance<span>9</span>, mental performance<span className={style.benefitsItem__note}>2</span> and more.',
+      },
+      item2: {
+        heading: 'Immune system',
+        text: 'Your daily dose of zinc, selenium, folate, vitamin C and more support your immune system<span className={style.benefitsItem__note}>3</span>.',
+      },
+      item3: {
+        heading: 'Steady energy',
+        text: 'AG1 provides nutrients that make sure the energy gets to where you really need it<span className={style.benefitsItem__note}>1</span>.',
+      },
+      item4: {
+        heading: 'Helps recovery',
+        text: 'Curated ingredients help to protect your cells against oxidative stress<span className={style.benefitsItem__note}>4</span>.',
+      },
+    },
+    buySection: {
+      text: "Vitamins, minerals, good bacteria, and whole food sourced ingredients in one convenient daily serving. One scoop, 250–350 ml of cold water. Once a day, every day.",
+      pouch: 'The Pouch',
+      packs: 'Travel Packs',
+      card1: {
+        heading: 'One Time Purchase',
+        pouchPrice: '€107',
+        packPrice: '€117',
+        pouchServing: '€3.57 Per Serving',
+        packServing: '€3.90 Per Serving',
+        btn: 'Buy Now',
+        about: 'Try out AG1:',
+        listItem1: '30 Servings of AG1 in a Single Pouch',
+        listItem1_1: '30 Individual Servings of AG1',
+        listItem2: 'Ships Once',
+      },
+      card2: {
+        mostBest: 'Most Popular',
+        heading: 'Single Subscription',
+        save: 'You save <span className={style.buyTop__savePercent}>20%</span>',
+        pouchDiscount: '€107',
+        packDiscount: '€117',
+        pouchPrice: '€87',
+        packPrice: '€97',
+        pouchServing: '€2.90 Per Serving',
+        packServing: '€3.23 Per Serving',
+        btn: 'Buy Now',
+        about: 'Best for starting your new healthy habit:',
+        listItem1: '30 Individual Servings of AG1',
+        listItem2: 'Delivered Monthly',
+        listItem3: 'Free Starter Kit: Shaker',
+        listItem4: 'No Commitment, Pause or Cancel Anytime',
+      },
+      card3: {
+        mostBest: 'Best Value',
+        heading: 'Double Subscription',
+        save: 'You save <span>30%</span>',
+        pouchDiscount: '€214',
+        packDiscount: '€234',
+        pouchPrice: '€167',
+        packPrice: '€177',
+        pouchServing: '€2.78 Per Serving',
+        packServing: '€2.95 Per Serving',
+        btn: 'Buy Now',
+        about: 'Best for 2 daily drinkers:',
+        listItem1: '60 Servings of AG1 in Two Pouches',
+        listItem1_1: '60 Individual Servings of AG1',
+        listItem2: 'Delivered Monthly',
+        listItem3: 'Free Starter Kit: Premium Jar & Two Shakers',
+        listItem3_1: 'Free Starter Kit: Two Shakers',
+        listItem4: 'No Commitment, Pause or Cancel Anytime',
+      },
+      heading: 'CLEAN. MADE WITH CARE.',
+      text2: 'No artificial flavors, colors and preservatives.',
+      slogan1: 'GLUTEN FREE',
+      slogan2: 'NO EGGS',
+      slogan3: 'NO SUGAR ADDED',
+      slogan4: 'NUT FREE',
+      slogan5: 'DAIRY FREE',
+    },
+    habitSection: {
+      heading: 'Say hello to your new daily habit',
+      text: "One daily serving delivers not only greens (although it's green), but also essential vitamins & minerals as well as botanicals, bacterial cultures, and other whole-food sourced ingredients.",
+      item1: {
+        heading: 'Vitamins',
+        text: 'Vitamins are vital for good health. Together with minerals, they are involved in countless processes in the body: from the immune system<span className={style.habit__note}>3</span> to energy metabolism<span className={style.habit__note}>1</span> to mental fitness<span className={style.habit__note}>2</span>.',
+      },
+      item2: {
+        heading: 'Minerals',
+        text: 'Minerals, together with vitamins, enzymes and hormones, are essential for building tissues<span className={style.habit__note}>7</span>, cells<span className={style.habit__note}>4</span>, bones, teeth<span className={style.habit__note}>5</span> and for a range of metabolic processes<span className={style.habit__note}>1</span>.',
+      },
+      item3: {
+        heading: 'Bacterial cultures & botanicals',
+        text: 'AG1 is so much more than a multivitamin. Besides vitamins and minerals, each serving contains bacterial cultures, botanicals, and other whole-food sourced ingredients.',
+      },
+      item4: {
+        heading: 'Focus & Cell Protection',
+        text: 'Over 650 muscles move you every day - and your brain directs them at the right time. AG1 supports both: muscle recovery<span className={style.habit__note}>4</span> and mental fitness<span className={style.habit__note}>2</span>.',
+      },
+      item5: {
+        heading: 'Immune support',
+        text: 'To be at your best every day, you need a strong immune system. AG1 is the daily habit that supports this core health function<span className={style.habit__note}>3</span>.',
+      },
+      item6: {
+        heading: 'Energy & hormonal balance',
+        text: 'The energy-yielding metabolism makes sure that you have energy when and where you need it. And your endocrine system regulates a wide variety of bodily functions, from appetite to reproduction. AG1 supports both<span className={style.habit__note}>1,9</span>.',
+      },
+    },
+    ingSection: {
+      heading1: 'One scoop. Once a day. Every day.',
+      heading2: 'We set the bar for quality',
+      contentHeading1: 'Working in harmony',
+      contentText1: "Each of the ingredients in AG1 work together in harmony to amplify each other's effects to support foundational health and provide your high-quality daily nutrients.",
+      contentHeading2: 'Daily routine, made easy',
+      contentText2: "All you have to do with AG1 is mix one scoop with 10 ounces of cold water. It's something you drink once a day.",
+      contentHeading3: 'For just about everybody',
+      contentText3: 'Optimized for athletes, lifeletes, and everyone in between. Vegan, Paleo, and Keto-friendly.',
+      contentHeading4: 'Quality ingredients',
+      contentText4: 'Using the latest science, we select the most effective and bioavailable form of every single ingredient in AG1 to deliver the highest possible quality and value.',
+      contentHeading5: 'The highest standards',
+      contentText5: 'AG1 is one of only a handful of products to be both NSF-certified and made in a TGA-registered facility. This means that each ingredient and every batch is tested and verified to meet the gold standard for clean ingredient nutrition, and that every individual pack is 100% traceable.',
+      contentHeading6: '52 iterations & counting',
+      contentText6: 'We’ve set the bar for high-quality by working with top doctors, naturopath, nutritionist and flavor experts to make 52 iterations of AG1 to-date. This allows us to constantly follow the latest science and improve the taste.',
+      btn: 'Full Ingredients List'
+    },
+    peopleSection: {
+      heading: 'Recommended by top health experts & performers',
+      item1: {
+        name: 'Andrew Huberman',
+        regalia: 'Neuroscientist, Host of the Huberman Lab Podcast',
+        quote: '“I’ve been using AG1 by Athletic Greens since 2012 because it’s the simplest, most straightforward way for me to get my basis of important vitamins, minerals, and other high-quality ingredients like bacterial cultures and botanicals..”',
+      },
+      item2: {
+        name: 'Robin Arzón',
+        regalia: 'Head Instructor, Author of Shut Up & Run',
+        quote: '“I’m always looking for ways to level up and improve my performance. AG1 allows me to keep up with the daily hustle that being a new Mom, busy executive, and athlete requires. I have more energy and recover faster after a tough workout because of this product...”',
+      },
+      item3: {
+        name: 'Lewis Hamilton',
+        regalia: 'Seven-time Formula 1 Champion',
+        quote: '“I’ve been drinking AG1 by Athletic Greens every single day for a few years and it’s become a key part of my routine. As a daily clean, green support of my energy - it tastes great, is convenient to take on the road, and is complete enough to be an all-in-one supplement. I love that it’s a really easy way to support my health.”',
+      },
+    },
+  },
+  switcherLang: {
+    heading: 'Update Your Language Settings', 
+    text: 'Set your language:',
+    russian: 'Russian', 
+    english: 'English', 
+    cancel: 'Cancel',
+    save: 'Save',
+  }
+}
+

@@ -1,0 +1,159 @@
+@import '/src/variables.scss';
+
+.habit {
+  padding: 100px 0;
+  overflow-x: hidden;
+		&__heading {
+      text-align: center;
+      font-size: 56px;
+      margin-bottom: 30px;
+      font-weight: 400;
+      color: $main-color1;
+		}
+
+		&__text {
+      text-align: center;
+      margin: 0 auto 55px;
+      font-size: 24px;
+      max-width: 944px;
+      line-height: 40px;
+      color: $main-color1;
+		}
+
+		&__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+		}
+
+		&__item {
+      margin-bottom: 50px;
+      width: 32%;
+		}
+
+		&__img {
+      margin-bottom: 20px;
+      position: relative;
+      height: 296px;
+      img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        position: absolute;
+      }
+		}
+
+		&__itemHeading {
+      font-size: 24px;
+      color: $main-color1;
+      margin-bottom: 18px;
+		}
+
+		&__itemText {
+      font-size: 18px;
+      color: $main-color1;
+      line-height: 32px;
+      span {
+        font-size: 10.5px;
+        position: relative;
+        top: -7px
+      }
+		}
+    &__slider {
+      display: none;
+    }
+}
+
+@media (max-width: 1919.98px) {
+
+}
+
+@media (max-width: 1439.98px) {
+  .habit {
+    padding: 80px 0;
+    &__heading {
+      font-size: 44px;
+    }
+    &__text {
+      max-width: none;
+    }
+    &__item {
+      width: 48.5%;
+    }
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .habit {
+    &__heading {
+      margin-bottom: 15px;
+    }
+    &__itemHeading {
+      font-size: 20px;
+    }
+    padding: 60px 0 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .habit {
+    padding: 40px 0 110px;
+    &__heading {
+      font-size: 32px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    &__items {
+      display: none;
+    }
+    &__slider {
+      display: block;
+      position: relative;
+    }
+    &__sliderTray {
+      transition: all 0.3s ease;
+      display: flex;
+      width: calc(6 * 82vw) !important;
+    }
+    &__slide {
+      position: relative;
+      left: 9vw;
+      width: 82vw;
+      padding-left: 4vw;
+      padding-right: 4vw;
+      padding-bottom: 0 !important;
+    }
+    &__visibleSlide {
+      .habit__innerSlide {
+        transform: scale(1.15);
+      }
+    }
+    &__innerSlide {
+      -webkit-box-shadow: 0 5px 40px rgba(0,0,0,.15);
+      box-shadow: 0 5px 40px rgba(0,0,0,.15);
+      border: 2px solid #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 100%;
+      transition: all 0.3s ease;
+      padding-bottom: 15px;
+    }
+    &__img {
+      height: 170px;
+    }
+    &__itemHeading {
+      text-align: center;
+      font-size: 18px;
+    }
+    &__itemText {
+      text-align: center;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}

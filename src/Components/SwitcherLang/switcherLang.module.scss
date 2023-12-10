@@ -1,19 +1,163 @@
 @import '/src/variables.scss';
 
-.flag {
-  width: 32px;
+.wrapper {
+  * {
+    color: $main-color1;
+  }
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsla(120,0%,44%,.4);
+}
+.modal {
+  background-color: white;
+  border-radius: 10px;
+  width: 536px;
+}
+.top {
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+.heading {
+  font-size: 24px;
+}
+.close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  &::after, &::before {
+    top: 0;
+    left: 12px;
+    width: 2px;
+    height: 22px;
+    content: '';
+    position: absolute;
+    background-color: $main-color1;
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+.center {
+  padding: 30px 48px;
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+.text {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.inputBlock {
+  margin-bottom: 12px;
+  padding-left: 24px;
+  position: relative;
+  &::before {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid $main-color1;
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 2px;
+  }
+}
+.label {
+  font-size: 18px;
+  cursor: pointer;
+  &::before {
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #2f7d39;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 3px;
+    top: 5px;
+    transition: all 0.3s ease;
+  }
+}
+.input {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  opacity: 0;
+  &:checked + .label::before {
+    opacity: 1;
+  }
+}
+.bottom {
+  display: flex;
+  padding: 25px 48px;
+  justify-content: space-between;
 }
 
-.wrappper {
+@mixin button() {
+  border-radius: 10px;
+  width: 48.5%;
+  padding: 15px 5px;
+  font-size: 18px;
+  transition: all 0.3s ease;
   cursor: pointer;
-  height: 52px;
-  width: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  border: 2px solid white;
+}
+
+.cancel {
+  @include button();
+  border: 1px solid $main-color1;
+  background-color: transparent;
   &:hover {
-    opacity: 0.92;
+    border: 1px solid #98a1af;
+    background-color: #98a1af;
+    color: white;
+  }
+}
+.save {
+  @include button();
+  background-color: $main-color1;
+  color: white;
+  &:hover {
+    background-color: #4d6d6e;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal {
+    width: 94%;
+  }
+  .bottom {
+    flex-direction: column-reverse;
+    gap: 15px;
+    padding: 30px 24px;
+  }
+  .save, .cancel {
+    width: 100%;
+  }
+  .heading {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+  .center {
+    padding: 16px 24px 24px;
+  }
+  .top {
+    padding: 0 24px;
+    height: auto;
   }
 }

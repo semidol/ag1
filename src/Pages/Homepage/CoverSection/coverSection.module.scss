@@ -1,0 +1,146 @@
+@import '/src/variables.scss';
+
+.cover {
+  padding: 0 10px;
+  height: 920px;
+  &__img {
+    display: none;
+  }
+  &__video { 
+    video {
+      width: 100%;
+      height: 920px;
+      z-index: 0;
+      left: 0;
+      position: absolute;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__heading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 72px;
+    color: white;
+    font-family: serif;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 700;
+    max-width: 900px;
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+  }
+
+  &__btn {
+    @include btn();
+    font-size: 19px;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    svg {
+      width: 24px;
+    }
+  }
+}
+
+@media (max-width: 1919.98px) {
+  .cover {
+    height: 860px;
+    &__video {
+      video {
+        height: 860px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1439.98px) {
+  .cover {
+    height: 720px;
+    &__video {
+      video {
+        height: 720px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .cover {
+    height: 800px;
+    &__video {
+      video {
+        height: 800px;
+      }
+    }
+
+    &__heading {
+      font-size: 56px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cover {
+    padding: 0;
+    height: auto;
+    &__video {
+      display: none;
+    }
+
+    &__img {
+      display: block;
+      height: 281px;
+      width: 100%;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__heading {
+      color: $main-color1;
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      color: $main-color1;
+      font-size: 20px;
+    }
+    &__content {
+      margin: 30px auto 0;
+      display: block;
+      padding: 0 15px;
+      max-width: 500px;
+      text-align: center;
+      height: auto;
+    }
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}

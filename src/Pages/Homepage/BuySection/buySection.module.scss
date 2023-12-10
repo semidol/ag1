@@ -1,0 +1,370 @@
+@import '/src/variables.scss';
+
+.buy {
+  background-color: #f3f1f0;
+  padding: 100px 0;
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 48px 0;
+  }
+}
+.buyTop {
+  display: flex;
+  gap: 36px;
+
+		&__content {
+      width: 310px;
+		}
+
+		&__logo {
+      width: 118px;
+      * {
+        fill: $main-color1;
+      }
+      margin-bottom: 24px;
+		}
+
+		&__text {
+      line-height: 28px;
+      font-size: 16px;
+      color: $main-color1;
+      margin-bottom: 24px;
+		}
+
+    &__switcher {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__choose {
+      color: black;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    &__toggle {
+      cursor: pointer;
+      top: 2px;
+      background-color: #329b46;
+      width: 58px;
+      height: 28px;
+      border-radius: 24px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        top: 4px;
+        left: 4px;
+        border-radius: 50%;
+      }
+      &.active::after {
+        left: auto;
+        right: 4px;
+      }
+    }
+
+		&__cards {
+      flex-grow: 1;
+      display: flex;
+      gap: 12px;
+		}
+
+		&__card {
+      width: 33%;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 16px 20px 24px;
+      position: relative;
+      background-color: white;
+      -webkit-box-shadow: 0 8px 40px 0 rgba(15,46,47,.1);
+      box-shadow: 0 8px 40px 0 rgba(15,46,47,.1);
+      &:nth-child(1) {
+        border-radius: 4px;
+      }
+      &:nth-child(2) {
+        background-color: #e9ede5;
+      }
+		}
+
+		&__mostBest {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      background-color: $main-color1;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      left: 0;
+      width: 100%;
+      height: 44px;
+      top: -44px;
+      position: absolute;
+		}
+
+		&__heading {
+      font-size: 18px;
+      margin-bottom: 5px;
+		}
+
+		&__priceBlock {
+      margin-bottom: 12px;
+      display: flex;
+      gap: 7px;
+		}
+
+		&__save {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 20px;
+      border-radius: 32px;
+      background: #F93933;
+      color: white;
+      font-size: 12px;
+      span {
+        margin-left: 5px;
+        font-weight: 700;
+      }
+		}
+
+		&__discount {
+      color: #bac0ca;
+      font-size: 18px;
+      text-decoration: line-through;
+		}
+
+		&__price {
+      font-size: 18px;
+      font-weight: 700;
+		}
+
+		&__serving {
+      color: #bac0ca;
+      font-size: 12px;
+      margin-bottom: 25px;
+		}
+
+		&__img {
+      margin-bottom: 20px;
+      height: 125px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      img {
+        max-width: 257px;
+      }
+		}
+
+		&__btn {
+      @include btn();
+      width: 100%;
+      padding: 14px 24px;
+      font-size: 18px;
+      margin-bottom: 16px;
+		}
+
+		&__about {
+      margin-bottom: 14px;
+      font-size: 14px;
+		}
+
+		&__listItem {
+      position: relative;
+      font-size: 14px;
+      color: $main-color1;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        color: #0f2e2f;
+        background: no-repeat 50%/16px 16px url('./img/icon6.svg');
+      }
+		}
+}
+
+.buyBottom {
+  display: flex;
+  gap: 72px;
+		&__content {
+      max-width: 267px;
+		}
+
+		&__heading {
+      font-size: 18px;
+      margin-bottom: 35px;
+      color: $main-color1;
+		}
+
+		&__text {
+      color: $main-color1;
+      font-size: 18px;
+		}
+
+		&__free {
+      padding: 40px 24px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+		}
+
+		&__icon {
+      margin: 0 auto;
+      width: 24px;
+      margin-bottom: 4px;
+      img {
+        width: 100%;
+      }
+		}
+
+		&__slogan {
+      color: $main-color1;
+      font-size: 16px;
+      font-weight: 700;
+		}
+}
+
+@media (max-width: 1919.98px) {
+
+}
+
+@media (max-width: 1439.98px) {
+  .buy {
+    padding: 80px 0;
+    &__line {
+      margin: 40px 0;
+    }
+  }
+  .buyTop {
+    gap: 90px;
+    flex-direction: column;
+    &__content {
+      width: auto;
+    }
+  }
+  .buyBottom {
+    gap: 40px;
+    &__content {
+      max-width: 230px;
+    }
+    &__heading {
+      font-size: 16px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__free {
+      padding: 20px 0;
+    }
+    &__slogan {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .buy {
+    padding: 60px 0;
+  }
+
+  .buyTop{
+    &__priceBlock {
+      height: 50px;
+      flex-wrap: wrap;
+    }
+    &__saveWrap {
+      width: 100%;
+    }
+    &__img {
+      height: 110px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .buyBottom {
+    flex-direction: column;
+    &__content {
+      max-width: none;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .buy {
+    padding: 40px 0;
+    &__line {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  .buyTop {
+    &__cards {
+      flex-direction: column-reverse;
+      gap: 56px;
+    }
+    &__card {
+      width: 100%;
+      &:nth-child(2) {
+        order: 1;
+      }
+      &:nth-child(1) {
+        top: -32px;
+      }
+    }
+    &__mostBest {
+      height: 32px;
+      top: -32px;
+      font-size: 12px;
+    }
+    &__img {
+      height: 35vw;
+      text-align: center;
+      img {
+        max-width: 80%;
+      }
+    }
+    &__priceBlock {
+      height: auto;
+    }
+    &__save {
+      margin-right: 0;
+    }
+  }
+
+  .buyBottom {
+    &__item {
+      margin-bottom: 60px;
+      width: 50%;
+      &:last-child {
+        display: none; 
+      }
+      &:nth-child(3),&:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+    &__slogan {
+      text-align: center;
+      font-size: 14px;
+    }
+    &__free {
+      flex-wrap: wrap;
+    }
+  }
+}
