@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ag1/static/css/main.779599d5.css",
-    "main.js": "/ag1/static/js/main.c2688782.js",
+    "main.css": "/ag1/static/css/main.97f66cbd.css",
+    "main.js": "/ag1/static/js/main.1bc590ad.js",
     "static/js/787.2081d0c5.chunk.js": "/ag1/static/js/787.2081d0c5.chunk.js",
     "static/media/bg.mp4": "/ag1/static/media/bg.c7bdc8fa7cf1a01bb9a8.mp4",
     "static/media/portal7.webp": "/ag1/static/media/portal7.76017784f58f98e1e93e.webp",
@@ -14,7 +14,6 @@
     "static/media/Rubik-Regular.ttf": "/ag1/static/media/Rubik-Regular.55fa11cdc8b9a3ee842f.ttf",
     "static/media/buy6.png": "/ag1/static/media/buy6.8c77dd4219a5235dffeb.png",
     "static/media/buy2.png": "/ag1/static/media/buy2.98607e9391fd04aa2c8a.png",
-    "static/media/bg.jpg": "/ag1/static/media/bg.ef09b4a9e51641e39809.jpg",
     "static/media/portal6.jpg": "/ag1/static/media/portal6.6058d200fe2db95dca1c.jpg",
     "static/media/portal4.jpg": "/ag1/static/media/portal4.f465d2fcfa9720ec2279.jpg",
     "static/media/benefits2.jpg": "/ag1/static/media/benefits2.4ab964729344479cfc97.jpg",
@@ -41,6 +40,7 @@
     "static/media/habit1.jpg": "/ag1/static/media/habit1.bd98508891555b5e0734.jpg",
     "static/media/habit4.webp": "/ag1/static/media/habit4.3b5c7d11dad27789b8ae.webp",
     "static/media/benefits4.jpg": "/ag1/static/media/benefits4.59c77f8c59078b01645b.jpg",
+    "static/media/bg.jpg": "/ag1/static/media/bg.7cf09e4b8cf254fc1715.jpg",
     "static/media/img2.jpg": "/ag1/static/media/img2.7caf2b8dffa6f1250681.jpg",
     "static/media/standart2.svg": "/ag1/static/media/standart2.41726492a2fa674345c57233cb6a16e7.svg",
     "static/media/habit5.webp": "/ag1/static/media/habit5.f91a7fa98a77c071c7a0.webp",
@@ -51,6 +51,7 @@
     "static/media/benefits3.webp": "/ag1/static/media/benefits3.3a58285d03ac9d47562f.webp",
     "static/media/benefits6.jpg": "/ag1/static/media/benefits6.09a8416f32d69e1dca00.jpg",
     "static/media/habit1.webp": "/ag1/static/media/habit1.01b9622ac7727588b26d.webp",
+    "static/media/bg.webp": "/ag1/static/media/bg.ce25a6091e5d5a7d9c0b.webp",
     "static/media/buy2.webp": "/ag1/static/media/buy2.ed7a0a40ead1bfec5c4b.webp",
     "static/media/img3.jpg": "/ag1/static/media/img3.6652e4d3f2679771cde8.jpg",
     "static/media/img2.webp": "/ag1/static/media/img2.e013ae9d2a723a3d050a.webp",
@@ -73,12 +74,12 @@
     "static/media/icon5.svg": "/ag1/static/media/icon5.a168001e7e535f2f8fc8dd524c9e7930.svg",
     "static/media/arrow.svg": "/ag1/static/media/arrow.2c2e78ea92da156950652e31a7e01613.svg",
     "static/media/icon6.svg": "/ag1/static/media/icon6.44976b3e5ba7ca622fa4.svg",
-    "main.779599d5.css.map": "/ag1/static/css/main.779599d5.css.map",
-    "main.c2688782.js.map": "/ag1/static/js/main.c2688782.js.map",
+    "main.97f66cbd.css.map": "/ag1/static/css/main.97f66cbd.css.map",
+    "main.1bc590ad.js.map": "/ag1/static/js/main.1bc590ad.js.map",
     "787.2081d0c5.chunk.js.map": "/ag1/static/js/787.2081d0c5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.779599d5.css",
-    "static/js/main.c2688782.js"
+    "static/css/main.97f66cbd.css",
+    "static/js/main.1bc590ad.js"
   ]
 }
